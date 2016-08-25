@@ -19,7 +19,7 @@ func ~=<T>(pattern: (T) -> Bool, value: T) -> Bool {
 
 func isEven(n: Int) -> Bool { return n % 2 == 0 }
 func isDivisableByThree(n: Int) -> Bool { return n % 3 == 0 }
-func isDivisableByFive(n: Int) -> Bool { return n % 5 == 0 }
+func isDivisableByFive(n: Int) -> Bool { return n % 5 == 0 } //debated effiency
 func sixKplus1(n: Int) -> Bool { return (n-1) % 6 == 0 }
 func sixKminus1(n: Int) -> Bool { return (n+1) % 6 == 0 }
 
@@ -70,10 +70,10 @@ func isPrime(checkMe: Int) ->Bool {
     case _ where isDivisableByThree(n: checkMe):
         print("\(checkMe) divisible by 3")
         return false
-    case let x where isDivisableByFive(n: x):  //this in here for syntax lesson
+    case let x where isDivisableByFive(n: x):  //Debatably efficient.
         print("\(x) divisible by 5")
         return false
-    case let x where x%7 == 0:  //this also in here for syntax lesson
+    case let x where x%7 == 0:  //Definately not effiecent, in here for syntax lesson
         print("\(x) is divisible by 7")
         return false
     case _ where hasFactors(n: checkMe):
