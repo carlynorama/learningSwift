@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prime_Number_Checker_iOS10" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit a number to check if it is prime." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-QY-DmD">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuQ-oo-xh5">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="numberSubmitField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dcM-iD-piD"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-CN-c3A">
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h4M-rQ-HaN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xH-WK-qT9">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="hCq-QY-DmD" secondAttribute="leading" id="377-Ru-vbe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3xH-WK-qT9" secondAttribute="trailing" id="7cl-Jj-dsz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3GK-CN-c3A" secondAttribute="trailing" constant="-4" id="G4i-Fi-ymD"/>
+                            <constraint firstItem="3GK-CN-c3A" firstAttribute="leading" secondItem="kuQ-oo-xh5" secondAttribute="trailing" constant="8" id="LgQ-t2-5XI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3xH-WK-qT9" secondAttribute="leading" id="Olq-B3-GQ4"/>
+                            <constraint firstItem="3xH-WK-qT9" firstAttribute="top" secondItem="kuQ-oo-xh5" secondAttribute="bottom" constant="8" id="V4X-RT-43n"/>
+                            <constraint firstItem="hCq-QY-DmD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hCo-rq-g2H"/>
+                            <constraint firstItem="3GK-CN-c3A" firstAttribute="centerY" secondItem="kuQ-oo-xh5" secondAttribute="centerY" id="pwJ-7l-P3U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hCq-QY-DmD" secondAttribute="trailing" id="rla-ON-ME4"/>
+                            <constraint firstItem="kuQ-oo-xh5" firstAttribute="top" secondItem="hCq-QY-DmD" secondAttribute="bottom" constant="8" id="ya0-dx-hmH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="returnMessage" destination="3xH-WK-qT9" id="xgk-Ns-q3M"/>
+                        <outlet property="userSubmitField" destination="kuQ-oo-xh5" id="wy9-AM-cSi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+</document>

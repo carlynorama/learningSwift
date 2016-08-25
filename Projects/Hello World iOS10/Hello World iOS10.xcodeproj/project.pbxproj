@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2D5819D1D68FE5C004A7CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5819C1D68FE5C004A7CCA /* AppDelegate.swift */; };
+		D2D5819F1D68FE5C004A7CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5819E1D68FE5C004A7CCA /* ViewController.swift */; };
+		D2D581A21D68FE5D004A7CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D581A01D68FE5D004A7CCA /* Main.storyboard */; };
+		D2D581A51D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2D581A31D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodeld */; };
+		D2D581A71D68FE5D004A7CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D581A61D68FE5D004A7CCA /* Assets.xcassets */; };
+		D2D581AA1D68FE5D004A7CCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2D581A81D68FE5D004A7CCA /* LaunchScreen.storyboard */; };
+		D2D581B21D691403004A7CCA /* coffee-cup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2D581B11D691403004A7CCA /* coffee-cup.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2D581991D68FE5C004A7CCA /* Hello World iOS10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello World iOS10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D5819C1D68FE5C004A7CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2D5819E1D68FE5C004A7CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2D581A11D68FE5D004A7CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2D581A41D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hello_World_iOS10.xcdatamodel; sourceTree = "<group>"; };
+		D2D581A61D68FE5D004A7CCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2D581A91D68FE5D004A7CCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2D581AB1D68FE5D004A7CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D581B11D691403004A7CCA /* coffee-cup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coffee-cup.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2D581961D68FE5C004A7CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2D581901D68FE5C004A7CCA = {
+			isa = PBXGroup;
+			children = (
+				D2D5819B1D68FE5C004A7CCA /* Hello World iOS10 */,
+				D2D5819A1D68FE5C004A7CCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2D5819A1D68FE5C004A7CCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2D581991D68FE5C004A7CCA /* Hello World iOS10.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2D5819B1D68FE5C004A7CCA /* Hello World iOS10 */ = {
+			isa = PBXGroup;
+			children = (
+				D2D5819C1D68FE5C004A7CCA /* AppDelegate.swift */,
+				D2D5819E1D68FE5C004A7CCA /* ViewController.swift */,
+				D2D581A01D68FE5D004A7CCA /* Main.storyboard */,
+				D2D581B11D691403004A7CCA /* coffee-cup.jpg */,
+				D2D581A61D68FE5D004A7CCA /* Assets.xcassets */,
+				D2D581A81D68FE5D004A7CCA /* LaunchScreen.storyboard */,
+				D2D581AB1D68FE5D004A7CCA /* Info.plist */,
+				D2D581A31D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodeld */,
+			);
+			path = "Hello World iOS10";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2D581981D68FE5C004A7CCA /* Hello World iOS10 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D581AE1D68FE5D004A7CCA /* Build configuration list for PBXNativeTarget "Hello World iOS10" */;
+			buildPhases = (
+				D2D581951D68FE5C004A7CCA /* Sources */,
+				D2D581961D68FE5C004A7CCA /* Frameworks */,
+				D2D581971D68FE5C004A7CCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hello World iOS10";
+			productName = "Hello World iOS10";
+			productReference = D2D581991D68FE5C004A7CCA /* Hello World iOS10.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2D581911D68FE5C004A7CCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = carlynorama;
+				TargetAttributes = {
+					D2D581981D68FE5C004A7CCA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D2D581941D68FE5C004A7CCA /* Build configuration list for PBXProject "Hello World iOS10" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2D581901D68FE5C004A7CCA;
+			productRefGroup = D2D5819A1D68FE5C004A7CCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2D581981D68FE5C004A7CCA /* Hello World iOS10 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2D581971D68FE5C004A7CCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D581AA1D68FE5D004A7CCA /* LaunchScreen.storyboard in Resources */,
+				D2D581A71D68FE5D004A7CCA /* Assets.xcassets in Resources */,
+				D2D581B21D691403004A7CCA /* coffee-cup.jpg in Resources */,
+				D2D581A21D68FE5D004A7CCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2D581951D68FE5C004A7CCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D581A51D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodeld in Sources */,
+				D2D5819F1D68FE5C004A7CCA /* ViewController.swift in Sources */,
+				D2D5819D1D68FE5C004A7CCA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2D581A01D68FE5D004A7CCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D581A11D68FE5D004A7CCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2D581A81D68FE5D004A7CCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D581A91D68FE5D004A7CCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2D581AC1D68FE5D004A7CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2D581AD1D68FE5D004A7CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2D581AF1D68FE5D004A7CCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Hello World iOS10/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlynorama.Hello-World-iOS10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D2D581B01D68FE5D004A7CCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Hello World iOS10/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlynorama.Hello-World-iOS10";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2D581941D68FE5C004A7CCA /* Build configuration list for PBXProject "Hello World iOS10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D581AC1D68FE5D004A7CCA /* Debug */,
+				D2D581AD1D68FE5D004A7CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D581AE1D68FE5D004A7CCA /* Build configuration list for PBXNativeTarget "Hello World iOS10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D581AF1D68FE5D004A7CCA /* Debug */,
+				D2D581B01D68FE5D004A7CCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2D581A31D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2D581A41D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodel */,
+			);
+			currentVersion = D2D581A41D68FE5D004A7CCA /* Hello_World_iOS10.xcdatamodel */;
+			path = Hello_World_iOS10.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D2D581911D68FE5C004A7CCA /* Project object */;
+}
