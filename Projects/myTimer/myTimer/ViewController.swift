@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     
     
     @IBOutlet var displayTextField: UILabel!
+    @IBOutlet var playButton: UIBarButtonItem!
+    @IBOutlet var pauseButton: UIBarButtonItem!
+    
     
     
     @IBAction func minus10ButtonAction(_ sender: AnyObject) {
@@ -54,6 +57,7 @@ class ViewController: UIViewController {
     
     func pauseTimer() {
         myTimer.invalidate()
+        setUIPauseState()
     }
     
     func startTimer() {
@@ -63,7 +67,7 @@ class ViewController: UIViewController {
             print("already running, thanks")
         }
         
-        timeLeft = defaultTime
+        setUIPlayState()
         
     }
     
@@ -71,7 +75,7 @@ class ViewController: UIViewController {
         timeLeft = defaultTime
         myTimer.invalidate()
         updateTimeDisplay()
-        //pausedFlag = true
+        setUIPauseState()
     }
     
     func updateTimer() {
@@ -103,8 +107,20 @@ class ViewController: UIViewController {
             timeLeft = 0
         }
         
+        updateTimeDisplay()
+        
     }
     
+    func setUIPlayState() {
+        pauseButton.isEnabled = true
+        playButton.isEnabled = false
+        
+    }
+    
+    func setUIPauseState() {
+        playButton.isEnabled = true
+        pauseButton.isEnabled = false
+    }
     
 
     override func viewDidLoad() {
@@ -114,6 +130,7 @@ class ViewController: UIViewController {
 
         timeLeft = defaultTime
         updateTimeDisplay()
+        setUIPauseState()
         
         
     }
