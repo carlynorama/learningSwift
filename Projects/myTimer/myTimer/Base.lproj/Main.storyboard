@@ -79,8 +79,10 @@
                     </view>
                     <connections>
                         <outlet property="displayTextField" destination="RWX-wR-TVx" id="Nk3-3x-Awm"/>
+                        <outlet property="minus10Button" destination="zIt-Op-XJo" id="B5n-vp-u4V"/>
                         <outlet property="pauseButton" destination="bRh-Br-ZXd" id="AWh-Bc-zIU"/>
                         <outlet property="playButton" destination="bo7-Ez-k6m" id="uuC-Gz-QHa"/>
+                        <outlet property="plus10Button" destination="Jwy-5O-6lD" id="Cm5-GH-4k4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

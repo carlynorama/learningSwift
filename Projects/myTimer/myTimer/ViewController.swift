@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet var displayTextField: UILabel!
     @IBOutlet var playButton: UIBarButtonItem!
     @IBOutlet var pauseButton: UIBarButtonItem!
-    
+    @IBOutlet var minus10Button: UIBarButtonItem!
+    @IBOutlet var plus10Button: UIBarButtonItem!
     
     
     @IBAction func minus10ButtonAction(_ sender: AnyObject) {
@@ -123,23 +124,34 @@ class ViewController: UIViewController {
     
     func timerFinish() {
         AudioServicesPlaySystemSound (orderUpChimeSoundID)
-        print("Egg Ready!")
-        resetTimer()
+        setUIFinishState()
         
     }
     
     func setUIPlayState() {
         pauseButton.isEnabled = true
         playButton.isEnabled = false
+        plus10Button.isEnabled = true
+        minus10Button.isEnabled = true
         
     }
     
     func setUIPauseState() {
         playButton.isEnabled = true
         pauseButton.isEnabled = false
+        plus10Button.isEnabled = true
+        minus10Button.isEnabled = true
     }
     
-
+    func setUIFinishState() {
+        pauseButton.isEnabled = false
+        playButton.isEnabled = false
+        plus10Button.isEnabled = false
+        minus10Button.isEnabled = false
+        displayTextField.text = "Egg Ready!"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
