@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
-    
+    var orderUpChimeSoundID:SystemSoundID = 1016
     var myTimer = Timer()
    
     var defaultTime = 210
@@ -34,12 +35,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func minus10ButtonAction(_ sender: AnyObject) {
-        adjustTime(upordown: -1, howMuch: 10)
+        adjustTimeDown(howMuch: 10)
     }
     
     
     @IBAction func plus10ButtonAction(_ sender: AnyObject) {
-        adjustTime(upordown: 1, howMuch: 10)
+        adjustTimeUp(howMuch: 10)
     }
     
     @IBAction func resetButtonAction(_ sender: AnyObject) {
@@ -80,8 +81,15 @@ class ViewController: UIViewController {
     
     func updateTimer() {
         
-        timeLeft = timeLeft - 1
-        updateTimeDisplay()
+        guard timeLeft > 0 else {
+            timerFinish()
+            return
+        }
+        
+            timeLeft -= 1
+            updateTimeDisplay()
+
+        
         
     }
     
@@ -94,20 +102,29 @@ class ViewController: UIViewController {
     }
     
     
-    func adjustTime(upordown: Int, howMuch: Int) {
+    func adjustTimeUp(howMuch: Int) {
+    
+        timeLeft += howMuch
+        updateTimeDisplay()
         
-        guard abs(upordown) == 1 else {
-            print("adjustTime: can't tell if up or down?, 1 or -1 please.")
-            return
-        }
+    }
+    
+    func adjustTimeDown(howMuch: Int) {
         
         if timeLeft > howMuch {
-            timeLeft = timeLeft + (upordown * howMuch)
+            timeLeft -= howMuch
         } else {
             timeLeft = 0
         }
         
         updateTimeDisplay()
+        
+    }
+    
+    func timerFinish() {
+        AudioServicesPlaySystemSound (orderUpChimeSoundID)
+        print("Egg Ready!")
+        resetTimer()
         
     }
     
