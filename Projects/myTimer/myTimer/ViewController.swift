@@ -89,8 +89,6 @@ class ViewController: UIViewController {
         
             timeLeft -= 1
             updateTimeDisplay()
-
-        
         
     }
     

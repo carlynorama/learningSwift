@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimesTables" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Oka-Ku-igs">
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Iyd-7J-7Ok"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8h0-j6-rvm">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Tables" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y65-Au-tBm">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Y65-Au-tBm" firstAttribute="centerX" secondItem="8h0-j6-rvm" secondAttribute="centerX" id="MHe-C7-zHL"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="awb-rc-hN9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="TKW-yN-iWk">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TKW-yN-iWk" id="1fs-Ah-eKj">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vwD-gR-ypI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oWy-5b-oKh"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAb-JH-9t1">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-W5-02R">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="awb-rc-hN9" secondAttribute="bottom" id="0KZ-73-XPW"/>
+                            <constraint firstItem="Y65-Au-tBm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AwM-Hn-sPs"/>
+                            <constraint firstItem="Oka-Ku-igs" firstAttribute="leading" secondItem="1vE-W5-02R" secondAttribute="trailing" constant="8" id="CQO-qD-g31"/>
+                            <constraint firstItem="Oka-Ku-igs" firstAttribute="top" secondItem="Y65-Au-tBm" secondAttribute="bottom" constant="8" id="DCc-fj-8ot"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1vE-W5-02R" secondAttribute="leading" id="HPJ-eU-aTv"/>
+                            <constraint firstItem="awb-rc-hN9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Jyq-9a-MJO"/>
+                            <constraint firstItem="DAb-JH-9t1" firstAttribute="centerY" secondItem="Oka-Ku-igs" secondAttribute="centerY" id="MQs-xq-BWj"/>
+                            <constraint firstItem="1vE-W5-02R" firstAttribute="centerY" secondItem="Oka-Ku-igs" secondAttribute="centerY" id="XOt-kc-Ttp"/>
+                            <constraint firstItem="8h0-j6-rvm" firstAttribute="centerX" secondItem="Oka-Ku-igs" secondAttribute="centerX" id="XzR-Pc-QDa"/>
+                            <constraint firstItem="awb-rc-hN9" firstAttribute="top" secondItem="Oka-Ku-igs" secondAttribute="bottom" constant="8" id="hmw-CV-N0o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="awb-rc-hN9" secondAttribute="trailing" constant="-16" id="oQO-gL-RcI"/>
+                            <constraint firstItem="DAb-JH-9t1" firstAttribute="leading" secondItem="Oka-Ku-igs" secondAttribute="trailing" constant="8" id="qUE-YN-7xw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DAb-JH-9t1" secondAttribute="trailing" id="z2z-1i-uqz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliderValue" destination="Oka-Ku-igs" id="uTX-WH-Spz"/>
+                        <outlet property="timesTable" destination="awb-rc-hN9" id="ObR-o6-nL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
