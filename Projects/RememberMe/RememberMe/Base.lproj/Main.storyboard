@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RememberMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your number?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ6-Wd-u9b">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5M-jf-MKV">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="numberTextFieldReturn:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="F66-eA-qfH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgI-Jo-ulR">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0j-Qi-SBH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-xT-btr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="O5M-jf-MKV" secondAttribute="trailing" id="4pp-Yt-s1z"/>
+                            <constraint firstItem="QgI-Jo-ulR" firstAttribute="top" secondItem="O5M-jf-MKV" secondAttribute="bottom" constant="8" id="7Zz-K1-fnx"/>
+                            <constraint firstItem="ddR-xT-btr" firstAttribute="top" secondItem="QgI-Jo-ulR" secondAttribute="bottom" constant="8" id="Dow-1v-sRf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ddR-xT-btr" secondAttribute="trailing" id="HVe-yv-njO"/>
+                            <constraint firstItem="QgI-Jo-ulR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QuL-Zy-ZYR"/>
+                            <constraint firstItem="PQ6-Wd-u9b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U4Y-yf-Q6C"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O5M-jf-MKV" secondAttribute="leading" id="aTu-qv-KhL"/>
+                            <constraint firstItem="O5M-jf-MKV" firstAttribute="top" secondItem="PQ6-Wd-u9b" secondAttribute="bottom" constant="8" id="cC4-IM-cLE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ddR-xT-btr" secondAttribute="leading" id="goM-sR-zLj"/>
+                            <constraint firstItem="PQ6-Wd-u9b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x1r-5F-11o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="O5M-jf-MKV" id="WMb-mD-kAs"/>
+                        <outlet property="statusLabel" destination="ddR-xT-btr" id="rWB-Al-1gF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
