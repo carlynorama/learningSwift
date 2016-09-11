@@ -43,7 +43,11 @@
                                                 <action selector="tableEditButton:" destination="BYZ-38-t0r" id="TgD-Zz-ef7"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6TQ-Zu-w5n"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6TQ-Zu-w5n">
+                                            <connections>
+                                                <segue destination="wBV-7H-fqi" kind="show" id="GgE-BL-rsl"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -86,11 +90,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-ci-c6R">
+                                <frame key="frameInset" minX="58" minY="166" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ET0-wp-RFJ">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add New" id="LcY-XC-b4F">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="9CM-3t-AW0">
+                                            <connections>
+                                                <segue destination="nIi-bO-kQD" kind="unwind" unwindAction="unwindToTableViewWithSender:" id="9xI-jX-0kw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="tAJ-ll-lsY">
+                                            <connections>
+                                                <segue destination="nIi-bO-kQD" kind="unwind" unwindAction="unwindToTableViewWithSender:" id="Umr-vZ-xba"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T37-Cy-kbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nIi-bO-kQD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="935.20000000000005" y="123.68815592203899"/>
         </scene>
