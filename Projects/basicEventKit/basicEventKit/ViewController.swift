@@ -105,6 +105,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
 
+    
+    // MARK: - Segue Handling
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newReminderVC = segue.destination as! NewReminder
+        newReminderVC.eventStore = eventStore
+    }
 
 
 }

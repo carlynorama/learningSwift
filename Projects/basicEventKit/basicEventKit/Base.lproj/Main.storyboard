@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--New Reminder-->
         <scene sceneID="qXq-ay-feh">
             <objects>
-                <viewController id="wBV-7H-fqi" sceneMemberID="viewController">
+                <viewController id="wBV-7H-fqi" customClass="NewReminder" customModule="basicEventKit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfS-d2-Mrm"/>
                         <viewControllerLayoutGuide type="bottom" id="1dY-wX-CyA"/>
@@ -94,6 +94,9 @@
                                 <frame key="frameInset" minX="58" minY="166" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="wBV-7H-fqi" eventType="touchUpInside" id="Q1J-Hb-4Bh"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ET0-wp-RFJ">
                                 <frame key="frameInset" minY="20" height="44"/>
@@ -116,6 +119,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="reminderTextField" destination="m3n-js-Nth" id="sN8-SF-jOn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T37-Cy-kbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nIi-bO-kQD" userLabel="Exit" sceneMemberID="exit"/>
