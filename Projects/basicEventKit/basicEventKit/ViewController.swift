@@ -10,10 +10,25 @@ import UIKit
 import EventKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet var myRemindersTable: UITableView!
+    
+    
     var eventStore: EKEventStore!
     var reminders: [EKReminder]!  //add "Privacy - Reminders Usage Description" to info.plist
+
+    @IBOutlet var myRemindersTable: UITableView!
+
+    
+    @IBAction func tableEditButton(_ sender: AnyObject) {
+        myRemindersTable.isEditing = !myRemindersTable.isEditing
+        if myRemindersTable.isEditing{
+            myRemindersTable.setEditing(true, animated: true)
+        }else{
+            myRemindersTable.setEditing(false, animated: true)
+        }
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

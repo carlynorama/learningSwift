@@ -38,6 +38,11 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-vD-w7G">
                                 <items>
                                     <navigationItem title="Reminders" id="SHY-T8-BnK">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="7n1-5k-LEc">
+                                            <connections>
+                                                <action selector="tableEditButton:" destination="BYZ-38-t0r" id="TgD-Zz-ef7"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6TQ-Zu-w5n"/>
                                     </navigationItem>
                                 </items>
