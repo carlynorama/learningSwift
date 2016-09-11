@@ -36,12 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "reminderCell")
-        //cell.detailTextLabel?.text = "I see you there"
-        //cell.imageView?.image =
-        //cell.accessoryView.
-        //cell.textLabel?.text = cellContent[indexPath.row]
-        
-        
         let reminder:EKReminder! = reminders![indexPath.row]
         cell.textLabel?.text = reminder.title
         let formatter:DateFormatter = DateFormatter()
@@ -52,6 +46,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.detailTextLabel?.text = "N/A"
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let reminder: EKReminder = reminders[indexPath.row]
+        do{
+            try eventStore.remove(reminder, commit: true)
+            self.reminders.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
+        }catch{
+            print("An error occurred while removing the reminder from the database: \(error)")
+        }
     }
     
     // MARK: - Event Kit Handling
@@ -79,6 +85,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     public func rejected() {
         print("The app is not permitted to access reminders, make sure to grant permission in the settings and try again")
     }
+    
+
 
 
 }
