@@ -14,6 +14,9 @@ class NewReminder: UIViewController {
     @IBOutlet var reminderTextField: UITextField!
     var eventStore: EKEventStore!
     
+    @IBAction func reminderTextFieldReturn(_ sender: AnyObject) {
+        sender.resignFirstResponder()
+    }
     @IBAction func saveButtonAction(_ sender: AnyObject) {
         guard !((reminderTextField.text?.isEmpty)!) else {
             print("Nothing to send")
@@ -51,6 +54,9 @@ class NewReminder: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation
