@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0jN-rg-GDY" id="zRP-bj-VmU">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -115,9 +115,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lmM-hF-o9g" firstAttribute="leading" secondItem="efT-Bo-XBo" secondAttribute="leading" id="8XU-wJ-dGG"/>
+                            <constraint firstItem="iMk-Kp-gqD" firstAttribute="top" secondItem="lmM-hF-o9g" secondAttribute="bottom" constant="26" id="LEi-yb-Ipi"/>
                             <constraint firstItem="iMk-Kp-gqD" firstAttribute="trailing" secondItem="efT-Bo-XBo" secondAttribute="trailingMargin" id="dbr-K1-rEV"/>
                             <constraint firstItem="iMk-Kp-gqD" firstAttribute="centerX" secondItem="efT-Bo-XBo" secondAttribute="centerX" id="jac-QB-Crd"/>
-                            <constraint firstItem="iMk-Kp-gqD" firstAttribute="centerY" secondItem="efT-Bo-XBo" secondAttribute="centerY" id="lO9-Lh-jfn"/>
                             <constraint firstItem="iMk-Kp-gqD" firstAttribute="leading" secondItem="efT-Bo-XBo" secondAttribute="leadingMargin" id="nLz-Lg-YGf"/>
                             <constraint firstAttribute="trailing" secondItem="lmM-hF-o9g" secondAttribute="trailing" id="pcU-c4-XMb"/>
                             <constraint firstItem="lmM-hF-o9g" firstAttribute="top" secondItem="YEv-7b-INB" secondAttribute="bottom" constant="8" id="ttl-e8-oBX"/>
@@ -144,14 +144,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reminder Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-js-Nth">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="reminderTextFieldReturn:" destination="wBV-7H-fqi" eventType="primaryActionTriggered" id="N0g-g8-Ucn"/>
-                                </connections>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ET0-wp-RFJ">
                                 <items>
                                     <navigationItem title="Add New" id="LcY-XC-b4F">
@@ -174,12 +166,20 @@
                                     <action selector="saveButtonAction:" destination="wBV-7H-fqi" eventType="touchUpInside" id="Q1J-Hb-4Bh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reminder Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-js-Nth">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="reminderTextFieldReturn:" destination="wBV-7H-fqi" eventType="primaryActionTriggered" id="N0g-g8-Ucn"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m3n-js-Nth" firstAttribute="centerY" secondItem="Wvd-yK-lki" secondAttribute="centerY" id="6Yn-0d-VUd"/>
                             <constraint firstItem="xFS-ci-c6R" firstAttribute="top" secondItem="m3n-js-Nth" secondAttribute="bottom" constant="20" id="HWe-FM-RU0"/>
                             <constraint firstAttribute="trailing" secondItem="ET0-wp-RFJ" secondAttribute="trailing" id="Lwz-Kd-EUV"/>
+                            <constraint firstItem="m3n-js-Nth" firstAttribute="top" secondItem="ET0-wp-RFJ" secondAttribute="bottom" constant="26" id="VaR-PC-xQO"/>
                             <constraint firstItem="xFS-ci-c6R" firstAttribute="centerX" secondItem="m3n-js-Nth" secondAttribute="centerX" id="ZB2-9I-ihf"/>
                             <constraint firstItem="ET0-wp-RFJ" firstAttribute="top" secondItem="pfS-d2-Mrm" secondAttribute="bottom" constant="8" id="Zgt-Nb-Go5"/>
                             <constraint firstItem="ET0-wp-RFJ" firstAttribute="leading" secondItem="Wvd-yK-lki" secondAttribute="leading" id="p2D-7g-Xe9"/>
