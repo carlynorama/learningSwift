@@ -2,8 +2,8 @@
 //  EditReminder.swift
 //  basicEventKit
 //
-//  Created by Carlyn Maw on 9/11/16.
-//  Copyright © 2016 carlynorama. All rights reserved.
+//  Created by carlynorama on 9/11/16.
+//  No rights reserved.
 //
 
 import UIKit
