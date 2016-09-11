@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D22100F61D85F5C200B1C769 /* NewReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22100F51D85F5C200B1C769 /* NewReminder.swift */; };
+		D22100F81D8600FB00B1C769 /* EditReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22100F71D8600FB00B1C769 /* EditReminder.swift */; };
 		D296FE441D8307F300306CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296FE431D8307F300306CFA /* AppDelegate.swift */; };
 		D296FE461D8307F300306CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D296FE451D8307F300306CFA /* ViewController.swift */; };
 		D296FE491D8307F300306CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D296FE471D8307F300306CFA /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		D22100F51D85F5C200B1C769 /* NewReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminder.swift; sourceTree = "<group>"; };
+		D22100F71D8600FB00B1C769 /* EditReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditReminder.swift; sourceTree = "<group>"; };
 		D296FE401D8307F300306CFA /* basicEventKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = basicEventKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D296FE431D8307F300306CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D296FE451D8307F300306CFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D296FE451D8307F300306CFA /* ViewController.swift */,
 				D22100F51D85F5C200B1C769 /* NewReminder.swift */,
 				D296FE471D8307F300306CFA /* Main.storyboard */,
+				D22100F71D8600FB00B1C769 /* EditReminder.swift */,
 				D296FE4D1D8307F300306CFA /* Assets.xcassets */,
 				D296FE4F1D8307F300306CFA /* LaunchScreen.storyboard */,
 				D296FE521D8307F300306CFA /* Info.plist */,
@@ -144,6 +147,7 @@
 			files = (
 				D22100F61D85F5C200B1C769 /* NewReminder.swift in Sources */,
 				D296FE461D8307F300306CFA /* ViewController.swift in Sources */,
+				D22100F81D8600FB00B1C769 /* EditReminder.swift in Sources */,
 				D296FE4C1D8307F300306CFA /* basicEventKit.xcdatamodeld in Sources */,
 				D296FE441D8307F300306CFA /* AppDelegate.swift in Sources */,
 			);

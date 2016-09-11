@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var eventStore: EKEventStore!
     var reminders: [EKReminder]!  //add "Privacy - Reminders Usage Description" to info.plist
+    var selectedReminder: EKReminder!
 
     @IBOutlet var myRemindersTable: UITableView!
 
@@ -78,6 +79,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedReminder = self.reminders[indexPath.row]
+        self.performSegue(withIdentifier: "ShowReminderDetails", sender: self)
+    }
+    
     // MARK: - Event Kit Handling
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,8 +115,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - Segue Handling
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let newReminderVC = segue.destination as! NewReminder
-        newReminderVC.eventStore = eventStore
+        
+        if segue.identifier == "ShowReminderDetails"{
+            let reminderDetailsVC = segue.destination as! EditReminder
+            reminderDetailsVC.reminder = self.selectedReminder
+            reminderDetailsVC.eventStore = eventStore
+        }else{
+            let newReminderVC = segue.destination as! NewReminder
+            newReminderVC.eventStore = eventStore
+        }
+        
     }
 
 
