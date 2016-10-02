@@ -37,6 +37,10 @@ if let newrange2 = playground.range(of: "play") {
     print(playground[newrange2])
 }
 
+playground.components(separatedBy: " ")
+playground.uppercased()
+playground.lowercased()
+
 //Rob's way
 let myString = "Howdy Partner"
 let newString = NSString(string: myString)
