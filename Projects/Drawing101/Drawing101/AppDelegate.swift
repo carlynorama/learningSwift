@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Drawing101
 //
-//  Created by Carlyn Maw on 10/2/16.
-//  Copyright © 2016 carlynorama. All rights reserved.
+//  Created by carynorama on 10/2/16.
+//  No rights reserved.
 //
 
 import UIKit
