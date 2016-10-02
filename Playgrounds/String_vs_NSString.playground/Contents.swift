@@ -16,6 +16,7 @@ let firstFive = playground[range]
 // http://stackoverflow.com/questions/38159687/array-remove-object-at-string-may-not-be-indexed-with-int-it-has-variable
 
 
+//http://stackoverflow.com/questions/38070273/cant-create-a-range-in-swift-3
 let string = "ABCDEFG"
 if let range = string.range(of: "CDEF") {
     let lo = string.index(range.lowerBound, offsetBy: 1)
