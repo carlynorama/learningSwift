@@ -15,6 +15,9 @@ print(calculator_formatter.string(from: 0.568988376078) as Any)
 
 let formatter_currency = NumberFormatter()
 formatter_currency.numberStyle = NumberFormatter.Style.currency
+formatter_currency.paddingPosition = .afterPrefix
+formatter_currency.paddingCharacter = "❦"//if string pulls off first char
+formatter_currency.formatWidth = 17
 print(formatter_currency.string(from: 568378.92) ?? 78)
 //provide default value)
 
