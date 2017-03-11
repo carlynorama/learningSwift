@@ -1,15 +1,18 @@
 //: Playground - noun: a place where people can play
 /*
-If you set the usesSignificantDigits property to true, you can configure NSNumberFormatter to display significant digits using the minimumSignificantDigits and maximumSignificantDigits properties. If usesSignificantDigits is false, these properties are ignored.
-Otherwise, you can configure the minimum and maximum number of integer and fraction digits, or the numbers before and after the decimal separator, respectively, using the minimumIntegerDigits, maximumIntegerDigits, minimumFractionDigits, and maximumFractionDigits properties.
-
-*/
+ If you set the usesSignificantDigits property to true, you can configure NSNumberFormatter to display significant digits using the minimumSignificantDigits and maximumSignificantDigits properties. If usesSignificantDigits is false, these properties are ignored.
+ Otherwise, you can configure the minimum and maximum number of integer and fraction digits, or the numbers before and after the decimal separator, respectively, using the minimumIntegerDigits, maximumIntegerDigits, minimumFractionDigits, and maximumFractionDigits properties.
+ 
+ */
 import UIKit
 
 let calculator_formatter = NumberFormatter()
 calculator_formatter.numberStyle = NumberFormatter.Style.decimal
-calculator_formatter.maximumSignificantDigits = 8
-print(calculator_formatter.string(from: 568988376078.92) as Any)
+//calculator_formatter.maximumSignificantDigits = 8
+calculator_formatter.maximumFractionDigits = 7
+//calculator_formatter.maximumIntegerDigits = 6
+calculator_formatter.maximum = 9999
+print(calculator_formatter.string(from: 568988376078.92) ?? 67)
 print(calculator_formatter.string(from: 0.568988376078) as Any)
 //provide default value)
 
@@ -69,4 +72,5 @@ formatter_spell.numberStyle = NumberFormatter.Style.spellOut
 print(formatter_spell.string(from: 0.99)!)
 print(formatter_spell.string(from: 2.38)!)
 print(formatter_spell.string(from: 2.6)!)
+
 
